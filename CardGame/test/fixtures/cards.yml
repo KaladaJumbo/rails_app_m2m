@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  cost: 1
+  element_type: MyString
+  card_type: MyString
+  set_name: MyString
+  description: MyString
+  power: 1
+  toughness: 1
+
+two:
+  name: MyString
+  cost: 1
+  element_type: MyString
+  card_type: MyString
+  set_name: MyString
+  description: MyString
+  power: 1
+  toughness: 1
