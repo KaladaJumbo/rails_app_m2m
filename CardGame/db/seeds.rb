@@ -34,10 +34,15 @@ end
 5.times do 
     Card.create(name: Faker::Ancient.god, card_type: "God", toughness: toughness_arr.sample, power: power_arr.sample, element_type: element_type.sample, set_name: "origin", cost: cost_arr.sample)
 end
-     
-Deck.create(name: "adams smashers")
-Deck.create(name: "kaladas sleepers")
-Deck.create(name: "artemis meatdown")
+a = Player.find_or_create_by(name: "adam adolfo")    
+adam = Deck.find_or_create_by(name: "adams smashers", player: a)
+kalada = Deck.create(name: "kaladas sleepers", player: a)
+arty = Deck.create(name: "artemis meatdown", player: a)
 
+5.times do
+adam.cards << Card.all.sample
+kalada.cards << Card.all.sample
+arty.cards << Card.all.sample
+end
 
  

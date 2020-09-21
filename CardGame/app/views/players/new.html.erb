@@ -1,1 +1,17 @@
 <h1>player new</h1>
+<%=form_for(@player) do |f|%>
+<%= f.label :name %>
+<br>
+<%= f.text_field :name %>
+<br>
+<br>
+<%= f.label :playstyle %>
+<br>
+<%= f.text_field :playstyle %>
+<br>
+<br>
+<%= f.submit "Create your Character"%>
+<br>
+<br>
+<%end%>
+<%= link_to "All Cards", cards_path %>

@@ -1,1 +1,52 @@
-<h1>card new</h1>
+<h1>Create Your Own Card</h1>
+<%= form_for(@card) do |f|%>
+<%=f.label :name%>
+<br>
+<%=f.text_field :name%>
+<br>
+<br>
+<%=f.label :cost%>
+<br>
+<%=f.number_field :cost%>
+<br>
+<br>
+<%=f.label :element_type%>
+<br>
+<%=f.text_field :element_type%>
+<br>
+<br>
+<%=f.label :card_type%>
+<br>
+<%=f.text_field :card_type%>
+<br>
+<br>
+<%=f.label :set_name%>
+<br>
+<%=f.text_field :set_name%>
+<br>
+<br>
+<%=f.label :description%>
+<br>
+<%=f.text_area :description%>
+<br>
+<br>
+<%=f.label :power%>
+<br>
+<%=f.number_field :power%>
+<br>
+<br>
+<%=f.label :toughness%>
+<br>
+<%=f.number_field :toughness%>
+<br>
+<br>
+<%=f.label :ability%>
+<br>
+<%=f.text_field :ability%>
+<br>
+<br>
+<%=f.submit "Create Card"%>
+<%end%>
+
+
+

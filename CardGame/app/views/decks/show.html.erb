@@ -1,1 +1,8 @@
-<h1>deck show</h1>
+<h1><%= @deck.name%> </h1>
+
+<ol>
+<%@deck.cards.each do |card|%>
+    <li><%= link_to card.name, card_path(card)%></li>
+    <br>
+<%end%>
+</ol>

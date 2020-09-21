@@ -1,1 +1,24 @@
-<h1>deck new</h1>
+
+<h1>Create Your Own Deck</h1>
+<%= form_for(@deck) do |f|%>
+<%=f.label :name%>
+<br>
+<%=f.text_field :name%>
+<br>
+<br>
+<%=f.label :style%>
+<br>
+<%=f.text_field :style%>
+<br>
+<br>
+<%=f.label :decktype%>
+<br>
+<%=f.text_field :decktype%>
+<br>
+<br>
+<%=f.submit "Create Deck"%>
+<%end%>
+<%= link_to "Back to All Decks", decks_path%>
+
+
+

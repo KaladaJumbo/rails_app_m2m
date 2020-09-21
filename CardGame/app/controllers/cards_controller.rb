@@ -13,11 +13,15 @@ class CardsController < ApplicationController
     end
 
     def new
-
+        @card = Card.new
     end
 
     def create 
-
+        card = Card.find_or_create_by(
+            adam_hates_strong_params(:name, :cost, :element_type, :card_type, :set_name, :description, :power, :toughness, :ability)
+        )
+        card.save
+        redirect_to card_path(card)
     end 
 
     def edit
@@ -31,5 +35,11 @@ class CardsController < ApplicationController
     def destroy
 
     end
+
+    private
+    def adam_hates_strong_params(*args)
+        params.require(:card).permit(*args)
+    end
+    
 
 end

@@ -13,11 +13,15 @@ class PlayersController < ApplicationController
     end
 
     def new
-
+        @player = Player.new
     end
 
     def create 
-
+        player = Player.find_or_create_by(
+            adam_hates_strong_params(:name, :playstyle)
+        )
+        player.save
+        redirect_to player_path(player)
     end 
 
     def edit
@@ -30,6 +34,11 @@ class PlayersController < ApplicationController
 
     def destroy
 
+    end
+    private
+    def adam_hates_strong_params(*args)
+        params.require(:player).permit(*args)
+        #params.method(controller_name_singular).method(args)
     end
 
 end
