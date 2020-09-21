@@ -1,1 +1,8 @@
-<h1>deck index</h1>
+<h1><%=Index%></h1>
+
+<ol>
+<%@decks.each do |deck|%>
+    <br>
+    <li><%= link_to deck.name, deck_path(deck)%></li>
+<%end%>
+</ol>

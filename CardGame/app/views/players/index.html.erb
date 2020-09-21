@@ -1,1 +1,8 @@
-<h1>player index</h1>
+<h1>player Index</h1>
+
+<ol>
+<%@players.each do |player|%>
+    <br>
+    <li><%= link_to player.name, player_path(player)%></li>
+<%end%>
+</ol>
