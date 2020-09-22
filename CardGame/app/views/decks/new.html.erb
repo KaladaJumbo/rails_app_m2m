@@ -1,19 +1,24 @@
 
 <h1>Create Your Own Deck</h1>
 <%= form_for(@deck) do |f|%>
-<%=f.label :name%>
+<%=f.label "name:"%>
 <br>
 <%=f.text_field :name%>
 <br>
 <br>
-<%=f.label :style%>
+<%=f.label "style:"%>
 <br>
 <%=f.text_field :style%>
 <br>
 <br>
-<%=f.label :decktype%>
+<%=f.label "decktype:"%>
 <br>
 <%=f.text_field :decktype%>
+<br>
+<br>
+<%=f.label "Enter a player name(if player does not exist we will create one):"%>
+<br>
+<%=f.text_field :player%>
 <br>
 <br>
 <%=f.submit "Create Deck"%>
