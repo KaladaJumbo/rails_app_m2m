@@ -1,8 +1,3 @@
 <h1>Card Index</h1>
 
-<ol>
-<%@cards.each do |card|%>
-    <br>
-    <li><%= link_to card.name, card_path(card)%></li>
-<%end%>
-</ol>
+<%= render partial: "shared/allcards" %>

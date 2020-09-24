@@ -3,6 +3,6 @@ Rails.application.routes.draw do
   resources :cards
   resources :decks
   resources :players
-  get "decks/:id/addcard", to: "decks#addcard"
+  get "decks/:id/addcard", to: "decks#addcard", as: "addcard"
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

@@ -27,6 +27,7 @@ class DecksController < ApplicationController
 
     def addcard
         @cards = Card.all
+        @deck = Deck.find(params[:id])
         render "addcard"
     end
 
@@ -35,7 +36,9 @@ class DecksController < ApplicationController
     end
 
     def update
-
+        deck = Deck.find(params[:id])
+        deck.update(card_ids: params[:deck][:card_ids])
+        redirect_to deck_path(deck)
     end
 
     def destroy

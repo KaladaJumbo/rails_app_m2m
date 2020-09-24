@@ -1,11 +1,16 @@
 <h1>Card Index</h1>
+<%= form_for(@deck) do |f| %>
+<ul>
+<%= f.collection_check_boxes(:card_ids, Card.all, :id, :name) do |card| %>
+<br><li>
 
-<ol>
-<%@cards.each do |card|%>
-    <br>
-    <li><%= link_to card.name, card_path(card)%>   <%= check_box_tag "", value = card%></li>
+<%= link_to card.label, card_path(card.object) %>
+<%= card.check_box %>
+</li>
 <%end%>
-</ol>
+<%= f.submit "Add Cards"%>
+<%end%>
+</ul>
 
+<p><%= link_to "add all cards", addcard_path(params[:id])%></p>
 
-<p>add all cards</p>
